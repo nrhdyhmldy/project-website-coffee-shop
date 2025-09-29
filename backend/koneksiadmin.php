@@ -2,7 +2,7 @@
 $db_host = 'localhost';
 $db_user = 'root';
 $db_pass = '';
-$db_name = 'db_users';
+$db_name = 'db_admin';
 
 $koneksi = new mysqli($db_host, $db_user, $db_pass, $db_name);
 

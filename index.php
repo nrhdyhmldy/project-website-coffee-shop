@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coffee Admin Dashboard</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="Asset/style.css" />
 </head>
 <body>
   <aside class="sidebar">
@@ -52,6 +52,6 @@
     </section>
   </main>
 
-  <script src="assets/script.js"></script>
+  <script src="Asset/script.js"></script>
 </body>
 </html>
