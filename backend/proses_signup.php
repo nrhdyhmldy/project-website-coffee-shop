@@ -7,7 +7,7 @@
         $password = ($_POST['password']);
        
         if (empty($username) || empty($email) || empty($_POST['password'])) {
-        echo "Error: Semua field harus diisi! <a href='nyoba.php'>Kembali</a>";
+        echo "Error: Semua field harus diisi! <a href='../frontend/signup.php'>Kembali</a>";
     }  else {
         $query = "INSERT INTO users1 (email, username, password) VALUES (?, ?, ?)";
         $stmt = $koneksi->prepare($query);
@@ -16,18 +16,18 @@
         if ($stmt->execute()) {
             echo "<h1>Registrasi Berhasil!</h1>";
             echo "<p>Selamat, " . $username . "! Data Anda telah disimpan.</p>";
-            echo '<a href="../frontend/nyoba.php">Kembali ke Form</a> | <a href="../frontend/tampil_data.php">Lihat Data</a>';
+            echo '<a href="../frontend/signup.php">Kembali ke Form</a> | <a href="../frontend/tampil_data.php">Lihat Data</a>';
         }else {
             if ($koneksi->errno == 1062) {
-                echo "Error: Email " . $email . " sudah terdaftar. <a href='nyoba.php'>Kembali</a>";
+                echo "Error: Email " . $email . " sudah terdaftar. <a href='../frontend/signup.php'>Kembali</a>";
             }
             else {
-                echo "Error saat registrasi: " . $stmt->error . " <a href='nyoba.php'>Kembali</a>";
+                echo "Error saat registrasi: " . $stmt->error . " <a href='../frontend/signup.php'>Kembali</a>";
             }
         }$stmt->close();
     }
 } else {
-    header('Location: nyoba.php');
+    header('Location: ../frontend/signup.php');
     exit();
 }
 $koneksi->close();

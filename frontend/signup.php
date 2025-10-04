@@ -49,6 +49,7 @@
         }
         
         input[type="text"],
+        input[type="email"],
         input[type="password"] {
             width: 100%;
             padding: 12px 15px;
@@ -59,6 +60,7 @@
         }
         
         input[type="text"]:focus,
+        input[type="email"]:focus,
         input[type="password"]:focus {
             outline: none;
             border-color: #667eea;
@@ -116,10 +118,15 @@
         <div class="coffee-icon">☕</div>
         <h2>Login Coffee Shop</h2>
         
-        <form action="../backend/proses_login.php" method="POST">
+        <form action="../backend/proses_signup.php" method="POST">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email" required>
             </div>
             
             <div class="input-group">
@@ -130,7 +137,7 @@
             <button type="submit">Login</button>
             
             <div class="signup-link">
-                Belum punya akun? <a href="signup.php">Sign Up</a>
+                Sudah punya akun? <a href="login.php">Sign Up</a>
             </div>
         </form>
     </div>

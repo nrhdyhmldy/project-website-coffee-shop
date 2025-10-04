@@ -23,3 +23,7 @@ navItems.forEach(item => {
     pageContent.innerHTML = pages[page];
   });
 });
+
+document.getElementById('productno').addEventListener('click', function(){
+  windows.location.href="../frontend/nyoba.php";
+})
